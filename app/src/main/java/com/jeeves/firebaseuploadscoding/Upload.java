@@ -11,6 +11,9 @@ package com.jeeves.firebaseuploadscoding;
  */
 //@IgnoreExtraProperties
 public class Upload{
+    public static final int TYPE_NONE = -1;
+    public static final int TYPE_IMAGE = 1;
+    public static final int TYPE_VIDEO = 2;
 
     public String name;
     public String url;
@@ -31,5 +34,17 @@ public class Upload{
 
     public String getUrl() {
         return url;
+    }
+
+    public int getType(){
+        if(url == null) {
+            return TYPE_NONE;
+        }
+        if(url.contains(".mp4")){
+            return TYPE_VIDEO;
+        }
+        else{
+            return TYPE_IMAGE;
+        }
     }
 }

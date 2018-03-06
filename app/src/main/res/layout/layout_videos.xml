@@ -22,12 +22,11 @@
                 android:layout_height="wrap_content"
                 android:text="Name"
                 android:textAlignment="center" />
-
-            <ImageView
-                android:id="@+id/imageView"
+            <VideoView
+                android:id="@+id/videoview"
+                android:layout_below="@id/textViewName"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textViewName" />
+                android:layout_height="200dp"/>
 
         </RelativeLayout>
 

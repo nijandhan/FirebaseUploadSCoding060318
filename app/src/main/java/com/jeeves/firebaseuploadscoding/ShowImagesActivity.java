@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.MediaController;
 import android.widget.Toast;
@@ -66,6 +67,7 @@ public class ShowImagesActivity extends AppCompatActivity {
                 //iterating through all the values in database
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
                     Upload upload = postSnapshot.getValue(Upload.class);
+                    Log.i("ShowImagesActivity", "URL : "+upload.getUrl());
                     uploads.add(upload);
                 }
                 //creating adapter
